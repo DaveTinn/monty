@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 			execute(buff, &stack, line_number, my_file);
 		}
 		free(buff);
-	}	
+	}
 	free_monty_stack(stack);
 	fclose(my_file);
 	return (0);

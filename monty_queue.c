@@ -21,7 +21,7 @@ void my_queue(stack_t **head, unsigned int line_number)
 void addon_queue(stack_t **head, int n)
 {
 	stack_t *newNode, *currNode;
-	
+
 	currNode = *head;
 	newNode = malloc(sizeof(stack_t));
 	if (newNode == NULL)

@@ -7,20 +7,20 @@
  */
 void my_rotl(stack_t **head,  __attribute__((unused)) unsigned int line_number)
 {
-	stack_t *curr = *head, *ax;
+	stack_t *currNode = *head, *newNode;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return;
 	}
-	ax = (*head)->next;
-	ax->prev = NULL;
-	while (curr->next != NULL)
+	newNode = (*head)->next;
+	newNode->prev = NULL;
+	while (currNode->next != NULL)
 	{
-		curr = curr->next;
+		currNode = currNode->next;
 	}
-	curr->next = *head;
+	currNode->next = *head;
 	(*head)->next = NULL;
-	(*head)->prev =curr;
-	(*head) = ax;
+	(*head)->prev = currNode;
+	(*head) = newNode;
 }

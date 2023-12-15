@@ -7,7 +7,8 @@
  * @line_number: line number where the opcode occurs
  * Return: Nothing
  */
-int execute(char *buff, stack_t **stack, unsigned int line_number, FILE *my_file)
+int execute(char *buff, stack_t **stack,
+		unsigned int line_number, FILE *my_file)
 {
 	instruction_t _opCode[] = {
 		{"push", my_push},
@@ -50,6 +51,7 @@ int execute(char *buff, stack_t **stack, unsigned int line_number, FILE *my_file
 		fclose(my_file);
 		free(buff);
 		free_monty_stack(*stack);
+
 		exit(EXIT_FAILURE);
 	}
 	return (1);
